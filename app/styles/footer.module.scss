@@ -1,0 +1,121 @@
+.footer {
+  color: var(--color-lightblue);
+  .footer_top {
+    background-color: var(--color-darkblue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+    p {
+      font-weight: 500;
+      color: var(--color-white);
+      margin-bottom: 0.8rem;
+    }
+    input {
+      padding: 1rem 1.4rem;
+      border-radius: 0.8rem;
+      border: 1px solid #d0d5dd;
+      margin-right: 10px;
+    }
+  }
+  .footer_bottom {
+    padding-top: 6.4rem;
+    padding-bottom: 4.8rem;
+    background-color: #2d31a6;
+    .footer_bottom_first {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4.8rem;
+      .flex {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .flex:first-child {
+        padding-bottom: 4rem;
+      }
+      .flex:last-child {
+        a {
+          color: var(--color-white);
+          svg {
+            width: 2.4rem;
+            height: 2rem;
+          }
+        }
+      }
+      span {
+        display: block;
+        max-width: 36rem;
+      }
+      a {
+        margin-right: 1.6rem;
+        color: var(--color-lightblue);
+      }
+    }
+    .footer_bottom_end {
+      border-top: 1px solid var(--color-dblue);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 3.2rem;
+      a {
+        font-weight: 400;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    .footer_bottom_first {
+      .flex {
+        &:first-child {
+          flex-direction: column;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    .footer_top {
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+      gap: 3.2rem;
+      input {
+        width: 100%;
+        margin-bottom: 1.6rem;
+      }
+      button {
+        width: 100%;
+      }
+    }
+    .footer_bottom {
+      .footer_bottom_first {
+        flex-direction: column;
+        align-items: center;
+        div:first-child {
+          align-self: normal;
+          margin-bottom: 2.4rem;
+        }
+        .flex {
+          align-items: center;
+          justify-content: center;
+          &:first-child {
+            padding-bottom: 2rem;
+          }
+        }
+        span {
+          max-width: 100%;
+        }
+      }
+      .footer_bottom_end {
+        flex-direction: column-reverse;
+        gap: 2.4rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.header {
+  background-color: var(--color-blue);
+  .contain {
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .flex {
+      display: flex;
+      a {
+        color: var(--color-lightblue);
+        margin-right: 2.4rem;
+        white-space: nowrap;
+      }
+      button {
+        margin-right: 1rem;
+        white-space: nowrap;
+      }
+      .tel_btn {
+        padding: 1rem 1.8rem;
+        border-radius: 0.8rem;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-dblue);
+        color: #3538cd;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 1rem;
+        }
+      }
+    }
+    p {
+      display: none;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .contain {
+    justify-content: flex-end !important;
+    a {
+      margin-right: 10px !important;
+    }
+    .flex {
+      display: none !important;
+    }
+    &:last-child {
+      svg {
+        color: var(--color-white);
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+      p {
+        display: block;
+      }
+    }
+    .mobileNav {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-blue);
+      position: absolute;
+      top: 8rem;
+      right: 0;
+      left: 0;
+      width: 100%;
+      a,
+      button {
+        padding: 1rem;
+        text-align: center;
+      }
+      .tel_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .8rem;
+        border: none;
+        margin: 1rem 0;
+       svg{
+        color: #3538cd;
+        margin-right: 1rem;
+       }
+      }
+    }
+  }
+}
